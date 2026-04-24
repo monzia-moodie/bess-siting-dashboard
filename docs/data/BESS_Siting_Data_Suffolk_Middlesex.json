@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "title": "BESS Siting Data Compendium — Suffolk & Middlesex Counties, MA",
+    "project": "Next-Generation Energy Siting Tool — MassDOER × TPS Fellowship",
+    "version": "1.0",
+    "compiled": "April 2026",
+    "scope": "Suffolk County and Middlesex County, Massachusetts",
+    "iso_ne_zones": ["NEMA", "SENE"],
+    "state_goal_mw": 5000,
+    "goal_deadline": "July 31, 2030",
+    "sources": [
+      "ISO-NE Annual Markets Report 2024 (https://www.iso-ne.com)",
+      "ISO-NE 2024 EMM Report (https://www.iso-ne.com/static-assets/documents/100025/iso-ne-2024-emm-report-final.pdf)",
+      "ISO-NE Forward Capacity Auction Results FCA 14–18 (isonewswire.com)",
+      "Eversource Hosting Capacity Map MA (https://www.eversource.com/residential/about/doing-business-with-us/interconnections/massachusetts/hosting-capacity-map)",
+      "Eversource DER Project Costs MA (https://www.eversource.com/content/wma/residential/about/doing-business-with-us/builders-contractors/interconnections/massachusetts/distributed-energy-resources-project-costs)",
+      "National Grid MA System Data Portal (https://systemdataportal.nationalgrid.com/MA/)",
+      "U.S. DOE Atlas of Electric Distribution System Hosting Capacity Maps (https://www.energy.gov/cmei/us-atlas-electric-distribution-system-hosting-capacity-maps)",
+      "MassGIS 2020 EJ Population Data (https://www.mass.gov/info-details/massgis-data-2020-environmental-justice-populations)",
+      "MA Cumulative Impact Analysis Framework (https://www.mass.gov/info-details/cumulative-impact-analysis)",
+      "NREL 2025 Battery Storage Cost Projections (DOI: 10.2172/2583471)",
+      "NREL 2024 Annual Technology Baseline (https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage)",
+      "DOER Draft BESS Model Bylaw Oct 2025 (https://www.mass.gov/doc/doer-draft-battery-energy-storage-systems-bess-model-bylaw/download)",
+      "MA 2024 Climate Act Chapter 239 (signed Nov 20, 2024)",
+      "ISO Express Zone Load Data — NEMA (https://www.iso-ne.com/isoexpress/web/reports/load-and-demand/-/tree/whlsecost-hourly-nemassbost)",
+      "ISO Express Zone Load Data — SEMA (https://www.iso-ne.com/isoexpress/web/reports/load-and-demand/-/tree/whlsecost-hourly-semass)",
+      "Massachusetts Zoning Atlas (https://www.zoningatlas.org/massachusetts)",
+      "MAPC Zoning Atlas Metro Boston (https://zoningatlas.mapc.org/)",
+      "Mass.gov ESI Goals & Storage Target (https://www.mass.gov/info-details/esi-goals-storage-target)",
+      "Pierce Atwood Legal Alert — 2024 Climate Act (https://www.pierceatwood.com/alerts/breaking-massachusetts-passes-clean-energy-bill-streamlining-permitting-process-battery)",
+      "Chelsea Record — Energizar ZBA Approval (http://chelsearecord.com/2024/10/17/zba-okays-approvals-for-battery-storage-facility/)",
+      "Mass.gov Everett Battery Project (https://www.mass.gov/info-details/everett-battery-project)",
+      "pv magazine USA — 83E Round 1 Awards (https://pv-magazine-usa.com/2025/12/23/massachusetts-awards-1-3-gw-in-landmark-energy-storage-tender/)"
+    ]
+  },
+  "iso_ne_market_data": {
+    "lmp_2024": {
+      "hub_day_ahead_avg": 41.47,
+      "hub_real_time_avg": 39.50,
+      "nema_day_ahead_est": 42.09,
+      "nema_premium_pct_above_hub": 1.5,
+      "hub_winter_2024": 48.66,
+      "hub_summer_2024": 39.03,
+      "nema_summer_2025": 53.31,
+      "unit": "$/MWh",
+      "source": "ISO-NE 2024 Annual Markets Report"
+    },
+    "peak_scarcity_event": {
+      "date": "June 24, 2025",
+      "peak_lmp": 1600,
+      "daily_avg_lmp": 240,
+      "system_peak_mw": 26135,
+      "cause": "Extreme heat >100°F; 2,550 MW unexpected unavailability; Capacity Scarcity Condition declared",
+      "bess_earned": "~$1,110/MWh (Cranberry Point BESS, 150 MW, Carver MA)",
+      "source": "ISO-NE; felpower.com"
+    },
+    "pay_for_performance_penalty_rate": ">$9,300/MWh (effective June 2025)",
+    "system_load": {
+      "avg_hourly_2024_mw": 13924,
+      "annual_energy_2025_gwh": 117744,
+      "nema_share_pct": "25–28%",
+      "nema_peak_est_mw": "5,000–6,500",
+      "summer_peak_2025_mw": 26135,
+      "all_time_peak_mw": 28130,
+      "all_time_peak_date": "August 2, 2006",
+      "winter_peak_growth_rate_pct": 2.9,
+      "summer_peak_forecast_2034_mw": 26897,
+      "winter_peak_forecast_2034_mw": 26020,
+      "source": "ISO-NE 2025 CELT Report; isonewswire.com"
+    },
+    "forward_capacity_auctions": [
+      { "auction": "FCA 14", "period": "2023–2024", "sene_kw_month": 2.001, "rest_of_pool_kw_month": 2.001 },
+      { "auction": "FCA 15", "period": "2024–2025", "sene_kw_month": 3.980, "rest_of_pool_kw_month": 2.611, "note": "SENE import-constrained; 52% premium; ~600 MW storage cleared" },
+      { "auction": "FCA 16", "period": "2025–2026", "sene_kw_month": 2.639, "rest_of_pool_kw_month": 2.591, "note": "~700 MW storage cleared" },
+      { "auction": "FCA 17", "period": "2026–2027", "sene_kw_month": 2.590, "rest_of_pool_kw_month": 2.590 },
+      { "auction": "FCA 18", "period": "2027–2028", "sene_kw_month": 3.580, "rest_of_pool_kw_month": 3.580, "note": "38% increase; ~795 MW new solar+storage" }
+    ],
+    "interconnection_queue": {
+      "total_queue_mw": 14000,
+      "storage_share_pct": 46,
+      "estimated_storage_mw": 6400,
+      "transitional_cluster_projects": 26,
+      "cluster_storage_projects": 21,
+      "cluster_total_capacity_mw": 8000,
+      "majority_location": "Massachusetts",
+      "mean_interconnection_cost_kw": 230,
+      "median_interconnection_cost_kw": 148,
+      "source": "ISO-NE Jan 2026; isonewswire.com Oct 2025; LBNL June 2023"
+    }
+  },
+  "hosting_capacity": {
+    "eversource": {
+      "service_area": "Suffolk County (all), most of Middlesex County",
+      "map_url": "https://www.eversource.com/residential/about/doing-business-with-us/interconnections/massachusetts/hosting-capacity-map",
+      "interactive_tool": "https://navigator.eversource.envelio.com/ (launched Dec 2025, envelio Grid Connection Navigator)",
+      "ornl_data_url": "https://openenergyhub.ornl.gov/explore/dataset/dghosting_adminvw_dg_hosting_ced_ema_st/",
+      "data_fields": ["Hosting Capacity (MW)", "Bulk Station Hosting Capacity", "Location Hosting Capacity", "Headroom for Load"],
+      "ma_territory_pipeline_dec2024_mwh": 4546,
+      "ma_territory_pipeline_dec2024_mw": 1244,
+      "note": "Circuit-specific values require interactive tool query; no bulk static extraction available"
+    },
+    "national_grid": {
+      "service_area": "Parts of Middlesex County: Lowell, Dracut, Tewksbury, Chelmsford, Billerica, Framingham",
+      "portal_url": "https://systemdataportal.nationalgrid.com/MA/",
+      "methodology": "CymeDist modeling with EPRI DRIVE tool for nodal hosting capacity",
+      "data_fields": ["Feeder loading", "Available hosting capacity", "Connected/pending DG", "Voltage", "Heat maps"],
+      "wholesale_distribution_tariff": {
+        "approved": "FERC March 2024",
+        "f1_rate_access_charge_month": 20.94,
+        "f1_rate_contract_demand_kw": 0.51,
+        "f1_rate_peak_demand_kw": 7.28
+      },
+      "ma_territory_pipeline_dec2024_mwh": 8826,
+      "ma_territory_pipeline_dec2024_mw": 1059
+    },
+    "doe_atlas": {
+      "url": "https://www.energy.gov/cmei/us-atlas-electric-distribution-system-hosting-capacity-maps",
+      "last_updated": "July 2025",
+      "ma_utilities_with_public_maps": ["Eversource", "National Grid", "Unitil"],
+      "ma_hosting_maps_required_since": "November 2019"
+    }
+  },
+  "municipalities": [
+    {
+      "id": "chelsea", "name": "Chelsea", "county": "Suffolk", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.4,
+      "population_2020": 40787, "pop_density_per_sqmi": 18000,
+      "median_household_income": 62000, "poverty_rate_pct": 20,
+      "pct_minority": 80, "pct_hispanic": 65, "pct_foreign_born": 44,
+      "ej_designated_blocks_pct": 100, "ej_classification": "Very High",
+      "energy_burden_pct_income": 8.1, "asthma_rate": "2x state average",
+      "cia_indicators_triggered": ["PM2.5 burden", "Poverty", "Linguistic isolation", "Diesel PM", "Proximity to industrial sites"],
+      "scores": { "ej": 25, "grid": 23, "zoning": 20, "physical": 21, "revenue": 24, "total": 113, "max": 125 },
+      "hosting_capacity": "High", "interconnect_risk": "Low", "substation_proximity_miles": 0.4,
+      "estimated_interconnect_cost": "$200K–$500K",
+      "max_feasible_mw": 12, "best_duration": "4hr", "brownfield": true,
+      "zoning_class": "I-1/I-2 Industrial", "setback_ft": 50,
+      "permitting_timeline_months": "8–10",
+      "active_project": "250 MW Energizar — Flatiron Energy, 284 Eastern Ave, permitted Oct 2024, 83E Round 1 selected",
+      "host_community_agreement": "$1.5M/yr PILOT + $550K/yr HCA",
+      "source_notes": "Chelsea Record Oct 2024; Mass.gov EJ data Nov 2022"
+    },
+    {
+      "id": "everett", "name": "Everett", "county": "Middlesex", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.4,
+      "population_2020": 49075, "pop_density_per_sqmi": 14400,
+      "median_household_income": 79658, "poverty_rate_pct": null,
+      "pct_minority": 62, "pct_hispanic": 31, "pct_foreign_born": 45,
+      "ej_designated_blocks_pct": 100, "ej_classification": "Very High",
+      "energy_burden_pct_income": 7.8, "asthma_rate": "High",
+      "cia_indicators_triggered": ["Industrial pollution burden", "PM2.5", "Poverty pockets", "Former petroleum terminal"],
+      "scores": { "ej": 25, "grid": 25, "zoning": 22, "physical": 24, "revenue": 23, "total": 119, "max": 125 },
+      "hosting_capacity": "Very High", "interconnect_risk": "Very Low", "substation_proximity_miles": 0.2,
+      "estimated_interconnect_cost": "$150K–$350K",
+      "max_feasible_mw": 700, "best_duration": "8hr", "brownfield": true,
+      "zoning_class": "I-2 Heavy Industrial", "setback_ft": 50,
+      "permitting_timeline_months": "7–9",
+      "active_project": "700 MW Trimount ESS — Jupiter Power (BlackRock), former ExxonMobil site, EFSB approved Feb 2025, 83E Round 1 selected; defers $2.2B transmission upgrades",
+      "host_community_agreement": "Not yet public",
+      "source_notes": "Mass.gov Everett Battery Project page; EFSB Docket 25-05; Energy-Storage.News"
+    },
+    {
+      "id": "lowell", "name": "Lowell", "county": "Middlesex", "utility": "National Grid",
+      "iso_ne_zone": "NEMA", "lmp_premium_pct": 1.3,
+      "population_2020": 115554, "pop_density_per_sqmi": 7842,
+      "median_household_income": 76000, "poverty_rate_pct": 17,
+      "pct_minority": 56, "pct_asian": 21, "pct_hispanic": 19,
+      "ej_designated_blocks_pct": 96, "ej_classification": "High",
+      "energy_burden_pct_income": 7.4, "asthma_rate": "High",
+      "cia_indicators_triggered": ["PM2.5", "Poverty", "Linguistic isolation", "Industrial legacy"],
+      "scores": { "ej": 22, "grid": 19, "zoning": 22, "physical": 23, "revenue": 19, "total": 105, "max": 125 },
+      "hosting_capacity": "High", "interconnect_risk": "Low-Medium", "substation_proximity_miles": 0.8,
+      "estimated_interconnect_cost": "$300K–$700K",
+      "max_feasible_mw": 16, "best_duration": "4hr", "brownfield": true,
+      "zoning_class": "Industrial/Mill Reuse", "setback_ft": 75,
+      "permitting_timeline_months": "9–11",
+      "active_project": "None confirmed",
+      "host_community_agreement": null,
+      "source_notes": "MassGIS EJ Nov 2022; National Grid SDP; Census Reporter"
+    },
+    {
+      "id": "eastboston", "name": "East Boston", "county": "Suffolk", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.5,
+      "population_2020": 44000, "pop_density_per_sqmi": null,
+      "median_household_income": 55000, "poverty_rate_pct": 22,
+      "pct_minority": 71, "pct_hispanic": 53, "pct_foreign_born": 46,
+      "ej_designated_blocks_pct": 100, "ej_classification": "Very High",
+      "energy_burden_pct_income": 9.2, "asthma_rate": "2x state average",
+      "cia_indicators_triggered": ["Airport proximity (noise/PM2.5)", "Income", "Linguistic isolation", "Flood exposure", "Diesel PM"],
+      "scores": { "ej": 24, "grid": 21, "zoning": 16, "physical": 18, "revenue": 25, "total": 104, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium", "substation_proximity_miles": 0.6,
+      "estimated_interconnect_cost": "$400K–$800K",
+      "max_feasible_mw": 7, "best_duration": "2hr", "brownfield": false,
+      "zoning_class": "IA/NB Commercial", "setback_ft": 60,
+      "permitting_timeline_months": "10–13",
+      "active_project": "None confirmed",
+      "host_community_agreement": null,
+      "source_notes": "MassGIS EJ Nov 2022; Boston.gov"
+    },
+    {
+      "id": "boston", "name": "Boston", "county": "Suffolk", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.3,
+      "population_2020": 675647, "pop_density_per_sqmi": 13800,
+      "median_household_income": 82000, "poverty_rate_pct": 15.6,
+      "pct_minority": 53, "pct_foreign_born": 30,
+      "ej_designated_blocks_pct": 84, "ej_classification": "High",
+      "energy_burden_pct_income": 5.8, "asthma_rate": "Elevated",
+      "cia_indicators_triggered": ["Income pockets", "Minority population", "Traffic-related air quality"],
+      "scores": { "ej": 18, "grid": 20, "zoning": 15, "physical": 14, "revenue": 24, "total": 91, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium-High", "substation_proximity_miles": 0.6,
+      "estimated_interconnect_cost": "$400K–$800K",
+      "max_feasible_mw": 10, "best_duration": "4hr", "brownfield": true,
+      "zoning_class": "No BESS-specific zoning; various industrial/commercial", "setback_ft": 60,
+      "permitting_timeline_months": "12–15",
+      "active_project": "185 MW Electric Ave — Flatiron/CME/Hecate, Brighton; ISO-NE interconnect no earlier than June 2027",
+      "host_community_agreement": null,
+      "source_notes": "Boston.gov; Bisnow; MassGIS EJ"
+    },
+    {
+      "id": "malden", "name": "Malden", "county": "Middlesex", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.3,
+      "population_2020": 66263, "pop_density_per_sqmi": 13000,
+      "median_household_income": 98000, "poverty_rate_pct": null,
+      "pct_minority": 58, "pct_asian": 29, "pct_foreign_born": 41,
+      "ej_designated_blocks_pct": 100, "ej_classification": "High",
+      "energy_burden_pct_income": 6.1, "asthma_rate": "Elevated",
+      "scores": { "ej": 22, "grid": 20, "zoning": 18, "physical": 20, "revenue": 21, "total": 101, "max": 125 },
+      "hosting_capacity": "High", "interconnect_risk": "Low",
+      "max_feasible_mw": 15, "best_duration": "4hr", "brownfield": false,
+      "zoning_class": "Industrial/Commercial", "setback_ft": 50,
+      "permitting_timeline_months": "9–11",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022"
+    },
+    {
+      "id": "framingham", "name": "Framingham", "county": "Middlesex", "utility": "National Grid",
+      "iso_ne_zone": "NEMA", "lmp_premium_pct": 1.2,
+      "population_2020": 72362, "pop_density_per_sqmi": null,
+      "median_household_income": 88000, "poverty_rate_pct": null,
+      "pct_minority": 40, "pct_foreign_born": null,
+      "ej_designated_blocks_pct": 87, "ej_classification": "High",
+      "energy_burden_pct_income": 5.6, "asthma_rate": "Elevated",
+      "scores": { "ej": 20, "grid": 18, "zoning": 19, "physical": 21, "revenue": 18, "total": 96, "max": 125 },
+      "hosting_capacity": "High", "interconnect_risk": "Low-Medium",
+      "max_feasible_mw": 18, "best_duration": "4hr", "brownfield": false,
+      "zoning_class": "Industrial (Route 9 Corridor)", "setback_ft": 75,
+      "permitting_timeline_months": "10–12",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022; National Grid SDP"
+    },
+    {
+      "id": "cambridge", "name": "Cambridge", "county": "Middlesex", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.4,
+      "population_2020": 118403, "pop_density_per_sqmi": null,
+      "median_household_income": 105000, "poverty_rate_pct": null,
+      "pct_minority": 40,
+      "ej_designated_blocks_pct": 95, "ej_classification": "High",
+      "energy_burden_pct_income": 4.8, "asthma_rate": "Average",
+      "scores": { "ej": 20, "grid": 18, "zoning": 13, "physical": 10, "revenue": 23, "total": 84, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium",
+      "max_feasible_mw": 6, "best_duration": "2hr", "brownfield": false,
+      "zoning_class": "Business/Mixed-Use", "setback_ft": 75,
+      "permitting_timeline_months": "13–16",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022"
+    },
+    {
+      "id": "revere", "name": "Revere", "county": "Suffolk", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.2,
+      "population_2020": 62186, "pop_density_per_sqmi": 10500,
+      "median_household_income": 87000, "poverty_rate_pct": null,
+      "pct_minority": 50, "pct_hispanic": 30, "pct_foreign_born": 44,
+      "ej_designated_blocks_pct": 100, "ej_classification": "High",
+      "energy_burden_pct_income": 6.4, "asthma_rate": "Elevated",
+      "scores": { "ej": 21, "grid": 19, "zoning": 14, "physical": 17, "revenue": 22, "total": 93, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium",
+      "max_feasible_mw": 5, "best_duration": "2hr", "brownfield": false,
+      "zoning_class": "Highway Business (BESS amendment proposed Sept 2025)", "setback_ft": 75,
+      "permitting_timeline_months": "11–14",
+      "active_project": "Zoning amendment in progress (Revere Journal, Sept 2025)",
+      "source_notes": "Revere Journal Sept 2025; MassGIS EJ Nov 2022"
+    },
+    {
+      "id": "somerville", "name": "Somerville", "county": "Middlesex", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.3,
+      "population_2020": 81045, "pop_density_per_sqmi": 19555,
+      "median_household_income": 95000,
+      "pct_minority": 35,
+      "ej_designated_blocks_pct": 73, "ej_classification": "Moderate",
+      "energy_burden_pct_income": 5.2, "asthma_rate": "Average",
+      "scores": { "ej": 17, "grid": 17, "zoning": 14, "physical": 12, "revenue": 21, "total": 81, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium",
+      "max_feasible_mw": 5, "best_duration": "2hr", "brownfield": false,
+      "zoning_class": "Commercial/Mixed-Use", "setback_ft": 75,
+      "permitting_timeline_months": "13–16",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022"
+    },
+    {
+      "id": "medford", "name": "Medford", "county": "Middlesex", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.2,
+      "population_2020": 59659, "pop_density_per_sqmi": 7494,
+      "median_household_income": 122000,
+      "pct_minority": 33,
+      "ej_designated_blocks_pct": 73, "ej_classification": "Moderate",
+      "energy_burden_pct_income": 4.3, "asthma_rate": "Average",
+      "scores": { "ej": 16, "grid": 16, "zoning": 15, "physical": 15, "revenue": 19, "total": 81, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium",
+      "max_feasible_mw": 6, "best_duration": "4hr", "brownfield": false,
+      "zoning_class": "Industrial/Commercial", "setback_ft": 75,
+      "permitting_timeline_months": "12–15",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022"
+    },
+    {
+      "id": "waltham", "name": "Waltham", "county": "Middlesex", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.2,
+      "population_2020": 62227,
+      "median_household_income": 95000,
+      "pct_minority": 37,
+      "ej_designated_blocks_pct": 74, "ej_classification": "Moderate",
+      "energy_burden_pct_income": 4.9, "asthma_rate": "Average",
+      "scores": { "ej": 17, "grid": 17, "zoning": 16, "physical": 16, "revenue": 19, "total": 85, "max": 125 },
+      "hosting_capacity": "Medium", "interconnect_risk": "Medium",
+      "max_feasible_mw": 8, "best_duration": "4hr", "brownfield": false,
+      "zoning_class": "Industrial Zones", "setback_ft": 75,
+      "permitting_timeline_months": "12–14",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022"
+    },
+    {
+      "id": "winthrop", "name": "Winthrop", "county": "Suffolk", "utility": "Eversource",
+      "iso_ne_zone": "SENE", "lmp_premium_pct": 1.1,
+      "population_2020": 19316,
+      "median_household_income": 85000,
+      "pct_minority": 20,
+      "ej_designated_blocks_pct": 44, "ej_classification": "Moderate",
+      "energy_burden_pct_income": 4.2, "asthma_rate": "Average",
+      "scores": { "ej": 10, "grid": 12, "zoning": 10, "physical": 8, "revenue": 16, "total": 56, "max": 125 },
+      "hosting_capacity": "Low", "interconnect_risk": "High",
+      "max_feasible_mw": 2, "best_duration": "2hr", "brownfield": false,
+      "zoning_class": "Residential-dominant", "setback_ft": 100,
+      "permitting_timeline_months": "14–18",
+      "active_project": "None",
+      "source_notes": "MassGIS EJ Nov 2022"
+    }
+  ],
+  "cost_benchmarks": {
+    "nrel_2025_installed_cost_kwh": {
+      "source": "NREL 2025 Cost Projections Update (DOI: 10.2172/2583471)",
+      "year_2024": { "low": 334, "mid": 334 },
+      "year_2026": { "low": 255, "mid": 308 },
+      "year_2028": { "low": 210, "mid": 275 },
+      "year_2030": { "low": 177, "mid": 243 },
+      "year_2035": { "low": 150, "mid": 245 }
+    },
+    "nrel_components_2024": {
+      "lfp_cabinets_kwh": 210,
+      "inverters_kwh": 128,
+      "structural_bos_kwh": 26,
+      "electrical_bos_kwh": 19,
+      "note": "4-hour utility-scale LFP Li-ion system, Q1 2024 benchmark"
+    },
+    "om_cost": { "fixed_pct_capex": 2.5, "variable_kwh": 0, "lifetime_years": 15, "source": "NREL 2024 ATB" },
+    "eversource_interconnection_costs": {
+      "oh_point_of_interconnection": 400000,
+      "ug_poi_above_500kw": 650000,
+      "substation_transformer_upgrade": 4000000,
+      "new_feeder_position": 2000000,
+      "conductor_reconductoring_per_mile_low": 1000000,
+      "conductor_reconductoring_per_mile_high": 1300000,
+      "underground_cable_replace_per_mile_low": 1900000,
+      "underground_cable_replace_per_mile_high": 9500000,
+      "dtt_installation": 500000,
+      "pad_mounted_switchgear_low": 200000,
+      "pad_mounted_switchgear_high": 250000,
+      "source": "Eversource MA DER Project Costs page (2021–2022)"
+    }
+  },
+  "revenue_stack_4hr_bess_nema": {
+    "note": "Estimated annual revenue per kW for a 4-hour BESS in ISO-NE NEMA/SENE zone",
+    "streams": [
+      { "stream": "Energy Arbitrage (LMP spread)", "low_kw_yr": 40, "high_kw_yr": 80, "source": "NREL 2021 median $63/kW for 6hr; ISO-NE historical LMP" },
+      { "stream": "Forward Capacity Market", "low_kw_yr": 31, "high_kw_yr": 48, "source": "FCA 15–18 clearing prices; SENE zone" },
+      { "stream": "Clean Peak Energy Certificates", "low_kw_yr": 15, "high_kw_yr": 65, "source": "ACP $65/MWh (2026–2032); multipliers up to 25x" },
+      { "stream": "Ancillary Services", "low_kw_yr": 2, "high_kw_yr": 10, "source": "ISO-NE regulation market" },
+      { "stream": "SMART Storage Adder", "low_kw_yr": 10, "high_kw_yr": 25, "source": "SMART 2.0/3.0 adders $0.025–$0.077/kWh" }
+    ],
+    "total_low_kw_yr": 90,
+    "total_high_kw_yr": 170,
+    "federal_itc": {
+      "base_pct": 6,
+      "with_pwa_pct": 30,
+      "domestic_content_bonus_pct": 10,
+      "energy_community_bonus_pct": 10,
+      "low_income_community_bonus_pct": 20,
+      "maximum_stackable_pct": 70,
+      "source": "One Big Beautiful Bill Act, signed July 2025; Section 48E"
+    }
+  },
+  "project_pipeline_suffolk_middlesex": {
+    "total_permitted_mw": 1285,
+    "total_permitted_mwh": 5140,
+    "projects": [
+      {
+        "name": "Trimount ESS", "municipality": "Everett", "county": "Middlesex",
+        "mw": 700, "mwh": 2800, "developer": "Jupiter Power (BlackRock)",
+        "status": "EFSB approved Feb 2025; Section 83E Round 1 selected Dec 2025",
+        "site": "Former ExxonMobil terminal, 20.75 acres, Mystic River",
+        "estimated_cost": "$500M–$1B+",
+        "battery_tech": "Hithium LFP",
+        "grid_benefit": "Defers $2.2B in transmission upgrades",
+        "source": "Mass.gov Everett Battery Project; Energy-Storage.News"
+      },
+      {
+        "name": "Energizar", "municipality": "Chelsea", "county": "Suffolk",
+        "mw": 250, "mwh": 1000, "developer": "Flatiron Energy",
+        "status": "Permitted Oct 2024 (ZBA); Section 83E Round 1 selected Dec 2025",
+        "site": "284 Eastern Ave, 3.7 acres, adjacent to Eversource substation",
+        "estimated_cost": "~$120M",
+        "local_benefits": "$1.5M/yr PILOT + $550K/yr HCA; Q2 2027 operations target",
+        "source": "Chelsea Record Oct 2024"
+      },
+      {
+        "name": "Electric Ave", "municipality": "Boston (Brighton)", "county": "Suffolk",
+        "mw": 185, "mwh": 740, "developer": "Flatiron Energy/CME/Hecate",
+        "status": "In development; ISO-NE interconnection no earlier than June 2027",
+        "note": "Indoor BESS; community opposition noted",
+        "source": "Bisnow; Boston.gov"
+      },
+      {
+        "name": "River Mill", "municipality": "Tyngsborough", "county": "Middlesex",
+        "mw": 150, "mwh": 600, "developer": "Rhynland Energy",
+        "status": "Section 83E Round 1 selected Dec 2025",
+        "note": "Capacity unconfirmed publicly; Merrimack River corridor",
+        "source": "pv magazine USA Dec 2025"
+      }
+    ]
+  },
+  "state_storage_goal": {
+    "target_mw": 5000,
+    "deadline": "July 31, 2030",
+    "breakdown_by_duration": {
+      "mid_duration_4_10hr_mw": 3500,
+      "long_duration_10_24hr_mw": 750,
+      "multi_day_over_24hr_mw": 750
+    },
+    "installed_statewide_mwh_2025": 644,
+    "pipeline_statewide_mwh": 12932,
+    "section_83e_procurement": [
+      { "round": 1, "date": "Dec 2025", "mw_awarded": 1268, "projects": 4, "from_bids": 13 },
+      { "round": 2, "date": "2026", "mw_planned": 1200, "note": "Mid-duration focus" },
+      { "round": 3, "date": "2027", "mw_planned": 1200, "note": "Long-duration" },
+      { "round": 4, "date": "2028", "mw_planned": 1300, "note": "Multi-day if feasible" }
+    ],
+    "source": "Mass.gov ESI Goals; pv magazine USA Dec 2025; Energy-Storage.News; TomorrowIQ"
+  },
+  "ej_regulatory_framework": {
+    "ej_criteria_massachusetts": [
+      "Minority population ≥40% of census block group",
+      "Median household income ≤65% of statewide median (~$54,850)",
+      "≥25% of households lack English proficiency",
+      "Minority ≥25% AND municipal median income ≤150% of statewide median"
+    ],
+    "data_source": "MassGIS 2020 EJ Population Layer (Census 2020 + ACS 2016-2020 5-yr), released Nov 2022",
+    "url": "https://www.mass.gov/info-details/massgis-data-2020-environmental-justice-populations",
+    "cia_indicators_count": 33,
+    "cia_effective_date": "July 1, 2024 (Chapter 8 of the Acts of 2021)",
+    "bess_cia_regulations": "980 CMR 15.00 — OEJE CIA Standards issued Jan 23, 2026",
+    "massenvironscreen": "Under development (analogous to CalEnviroScreen)",
+    "notable_ej_facts": {
+      "chelsea_asthma": "5th highest hospitalization rate from asthma in MA; ~2x statewide average",
+      "east_boston_burden": "Adjacent to Logan Airport; highest combined CIA score in Suffolk County",
+      "statewide_energy_burden_low_income_pct": 10,
+      "statewide_energy_burden_avg_pct": 3
+    }
+  },
+  "zoning_and_law": {
+    "doer_model_bylaw_date": "October 6, 2025",
+    "doer_model_bylaw_url": "https://www.mass.gov/doc/doer-draft-battery-energy-storage-systems-bess-model-bylaw/download",
+    "tiers": [
+      { "tier": 1, "capacity": "<250 kWh", "industrial": "By-Right", "commercial": "By-Right", "residential": "By-Right" },
+      { "tier": 2, "capacity": "250 kWh–10 MWh", "industrial": "By-Right", "commercial": "Site Plan Review", "residential": "Special Permit" },
+      { "tier": 3, "capacity": "10 MWh–100 MWh", "industrial": "Site Plan Review", "commercial": "Special Permit", "residential": "Special Permit" }
+    ],
+    "efsb_jurisdiction_threshold_mwh": 100,
+    "efsb_permitting_deadline_months": 15,
+    "local_permitting_deadline_months": 12,
+    "effective_dates": {
+      "efsb_sole_jurisdiction": "July 1, 2026",
+      "local_consolidated_permitting": "October 1, 2026"
+    },
+    "dover_amendment_protection": "M.G.L. c.40A §3 — standalone BESS protected from arbitrary municipal prohibition",
+    "key_case": "Duxbury Energy Storage v. Town of Duxbury ZBA (MA Land Court, June 2025)",
+    "ago_rejected_moratoriums": ["Carver 2022", "Wendell 2022–2025", "Shutesbury 2024", "Sherborn 2024", "Blandford 2026"],
+    "suffolk_middlesex_moratoriums": "NONE",
+    "fire_safety_standards": ["527 CMR 1.00 Chapter 52", "NFPA 855 (2020 edition, >20 kWh Li-ion)", "UL 9540 listing required"],
+    "implementing_regulations": "225 CMR 29.00 (effective Feb 27, 2026)"
+  }
+}

@@ -1,0 +1,119 @@
+
+=== MUNICIPALITY SITING SCORES & PROFILES ===
+
+ID,Municipality,County,Population (2020),Median HH Income ($),% Minority,% EJ Designated,CIA Classification,EJ Score (/25),Grid Score (/25),Zoning Score (/25),Physical Score (/25),Revenue Score (/25),Composite Score (/125),Grid Hosting Capacity,Interconnect Risk,Utility,Max Feasible MW,Best Duration,Permitting Timeline,Setback (ft),Zoning Class,Brownfield Site,Active Project,Energy Burden (% Income),Asthma Rate,LMP Premium vs Hub (%),ISO-NE Zone
+everett,Everett,Middlesex,49075,79658,62,100,Very High,25,25,22,24,23,119,Very High,Very Low,Eversource,700,8hr,7–9 mo,50,I-2 Heavy Industrial,Yes,700 MW Trimount ESS (EFSB approved Feb 2025),7.8,High,1.4,SENE
+chelsea,Chelsea,Suffolk,40787,62000,80,100,Very High,25,23,20,21,24,113,High,Low,Eversource,12,4hr,8–10 mo,50,I-1/I-2 Industrial,Yes,250 MW Energizar (permitted Oct 2024),8.1,2× state avg,1.4,SENE
+lowell,Lowell,Middlesex,115554,76000,56,96,High,22,19,22,23,19,105,High,Low-Med,National Grid,16,4hr,9–11 mo,75,Industrial / Mill Reuse,Yes,None confirmed,7.4,High,1.3,NEMA
+eastboston,East Boston,Suffolk,44000,55000,71,100,Very High,24,21,16,18,25,104,Medium,Medium,Eversource,7,2hr,10–13 mo,60,IA/NB Commercial,No,None confirmed,9.2,2× state avg,1.5,SENE
+malden,Malden,Middlesex,66263,98000,58,100,High,22,20,18,20,21,101,High,Low,Eversource,15,4hr,9–11 mo,50,Industrial/Commercial,No,None,6.1,Elevated,1.3,SENE
+framingham,Framingham,Middlesex,72362,88000,40,87,High,20,18,19,21,18,96,High,Low-Med,National Grid,18,4hr,10–12 mo,75,Industrial (Route 9 Corridor),No,None,5.6,Elevated,1.2,NEMA
+revere,Revere,Suffolk,62186,87000,50,100,High,21,19,14,17,22,93,Medium,Medium,Eversource,5,2hr,11–14 mo,75,Hwy Business (amendment proposed),No,Zoning amendment in progress (Sept 2025),6.4,Elevated,1.2,SENE
+boston,Boston,Suffolk,675647,82000,53,84,High,18,20,15,14,24,91,Medium,Med-High,Eversource,10,4hr,12–15 mo,60,No BESS-specific zoning,Yes,"185 MW Electric Ave (Brighton, in dev)",5.8,Elevated,1.3,SENE
+waltham,Waltham,Middlesex,62227,95000,37,74,Moderate,17,17,16,16,19,85,Medium,Medium,Eversource,8,4hr,12–14 mo,75,Industrial Zones,No,None,4.9,Average,1.2,SENE
+cambridge,Cambridge,Middlesex,118403,105000,40,95,High,20,18,13,10,23,84,Medium,Medium,Eversource,6,2hr,13–16 mo,75,Business/Mixed-Use,No,None,4.8,Average,1.4,SENE
+somerville,Somerville,Middlesex,81045,95000,35,73,Moderate,17,17,14,12,21,81,Medium,Medium,Eversource,5,2hr,13–16 mo,75,Commercial/Mixed-Use,No,None,5.2,Average,1.3,SENE
+medford,Medford,Middlesex,59659,122000,33,73,Moderate,16,16,15,15,19,81,Medium,Medium,Eversource,6,4hr,12–15 mo,75,Industrial/Commercial,No,None,4.3,Average,1.2,SENE
+winthrop,Winthrop,Suffolk,19316,85000,20,44,Moderate,10,12,10,8,16,56,Low,High,Eversource,2,2hr,14–18 mo,100,Residential-dominant,No,None,4.2,Average,1.1,SENE
+
+=== ISO-NE LMP PRICING DATA ===
+
+Metric,Value / Price,Period,Source
+Hub Day-Ahead LMP 2024,$41.47,2024,ISO-NE 2024 Annual Markets Report
+Hub Real-Time LMP 2024,$39.50,2024,ISO-NE 2024 Annual Markets Report
+NEMA Day-Ahead LMP 2024 (est.),$42.09,2024,Calculated at ~1.5% above Hub
+Hub Winter 2024,$48.66,Winter 2024,ISO-NE QMR
+Hub Summer 2024,$39.03,Summer 2024,ISO-NE QMR
+NEMA Summer 2025,$53.31,Summer 2025,ISO-NE QMR
+"Peak Event (June 24, 2025)","$1,600",June 24 2025,felpower.com; ISO-NE
+Pay-for-Performance Penalty,">$9,300",Effective June 2025,ISO-NE
+
+=== ISO-NE FORWARD CAPACITY AUCTION (FCA) RESULTS — SENE ZONE ===
+
+Auction,Capacity Period,SENE ($/kW-month),Rest-of-Pool ($/kW-month),Notes
+FCA 14,2023–2024,2.001,2.001,All zones uniform
+FCA 15,2024–2025,3.98,2.611,SENE import-constrained; 52% premium; ~600 MW storage cleared
+FCA 16,2025–2026,2.639,2.591,~700 MW storage cleared
+FCA 17,2026–2027,2.59,2.59,All zones uniform
+FCA 18,2027–2028,3.58,3.58,38% increase from FCA 17; ~795 MW new solar+storage
+
+=== 4-HOUR BESS REVENUE STACK — NEMA/SENE ZONE ($/kW-YEAR) ===
+
+Revenue Stream,Low ($/kW-yr),High ($/kW-yr),Notes / Source
+Energy Arbitrage (LMP spread),40,80,NREL 2021 median $63/kW for 6hr; ISO-NE historical LMP
+Forward Capacity Market (FCM),31,48,FCA 15–18 clearing prices; SENE zone
+Clean Peak Energy Certificates (CPS),15,65,ACP $65/MWh (2026–2032); multipliers up to 25×
+Ancillary Services,2,10,ISO-NE regulation market
+SMART Storage Adder,10,25,SMART 2.0/3.0 adders $0.025–$0.077/kWh
+TOTAL,$90,$170+,All streams combined
+
+"=== NREL BATTERY STORAGE INSTALLED COST PROJECTIONS ($/kWh, 4-HR LFP) ==="
+
+Year,Low ($/kWh),Mid ($/kWh),Notes
+2024,334,334,Q1 2024 benchmark; 4-hr utility-scale LFP
+2026,255,308,
+2028,210,275,
+2030,177,243,
+2035,150,245,
+
+=== FEDERAL TAX CREDITS — ITC STACKING (OBBBA JULY 2025) ===
+
+Credit Component,Rate,Condition / Notes
+Base ITC (Section 48E),6%,Without prevailing wage compliance
+With Prevailing Wage & Apprenticeship,30%,Required for projects >1 MW
++ Domestic Content Bonus,40% total,"US-produced steel, iron, manufactured products"
++ Energy Community Bonus,50% total,"Brownfields, closed coal, high-unemployment fossil fuel areas"
++ Low-Income Community Bonus,Up to 70% total,Low-income census tract or serving low-income residents
+
+=== EVERSOURCE DER INTERCONNECTION UPGRADE COSTS (MA) ===
+
+Upgrade Category,Cost Low ($),Cost High ($),Notes
+Overhead Point of Interconnection,400000,400000,
+Underground POI (>500 kW),650000,650000,
+Conductor Reconductoring,1000000,1300000,Per mile
+Express Feeder Extension,1000000,1300000,Per mile
+Underground Cable Replacement,1900000,9500000,Per mile
+Substation Transformer Upgrade (115–23kV),4000000,4000000,60–65 MVA
+New Feeder Position/Getaway,2000000,2000000,
+Pad-Mounted Switchgear,200000,250000,
+Recloser Installation,100000,150000,
+DTT Installation,500000,500000,
+
+=== ACTIVE BESS PROJECT PIPELINE — SUFFOLK & MIDDLESEX COUNTIES ===
+
+Project,Municipality,County,MW,MWh,Developer,Status,Est. Cost,Notes
+Trimount ESS,Everett,Middlesex,700,2800,Jupiter Power (BlackRock),EFSB approved Feb 2025; 83E Rd1 Selected,$500M–$1B+,"Former ExxonMobil terminal, 20.75 ac; Hithium LFP; defers $2.2B transmission upgrades"
+Energizar,Chelsea,Suffolk,250,1000,Flatiron Energy,ZBA permitted Oct 2024; 83E Rd1 Selected,~$120M est.,"284 Eastern Ave, adj. Eversource substation; $1.5M/yr PILOT + $550K HCA; Q2 2027 ops target"
+Electric Ave,Brighton (Boston),Suffolk,185,740,Flatiron/CME/Hecate,In Development; ISO-NE interconnect ≥ June 2027,Est. $90M+,Indoor BESS; community opposition noted
+River Mill,Tyngsborough,Middlesex,150,600,Rhynland Energy,83E Round 1 Selected; details TBD,Undisclosed,Merrimack River corridor; capacity unconfirmed publicly
+TOTAL,,,"~1,285","~5,140",,,,
+
+=== DATA SOURCES ===
+
+Source Title,Organization,URL
+ISO-NE 2024 Annual Markets Report,ISO-NE,https://www.iso-ne.com/static-assets/documents/100023/2024-annual-markets-report.pdf
+ISO-NE 2024 EMM Report,ISO-NE,https://www.iso-ne.com/static-assets/documents/100025/iso-ne-2024-emm-report-final.pdf
+ISO-NE NEMA Zone Load Data,ISO-NE,https://www.iso-ne.com/isoexpress/web/reports/load-and-demand/-/tree/whlsecost-hourly-nemassbost
+ISO-NE SEMA Zone Load Data,ISO-NE,https://www.iso-ne.com/isoexpress/web/reports/load-and-demand/-/tree/whlsecost-hourly-semass
+ISO-NE FCA Results,ISO Newswire,https://isonewswire.com
+Eversource Hosting Capacity Map MA,Eversource,https://www.eversource.com/residential/about/doing-business-with-us/interconnections/massachusetts/hosting-capacity-map
+Eversource DER Project Costs MA,Eversource,https://www.eversource.com/content/wma/residential/about/doing-business-with-us/builders-contractors/interconnections/massachusetts/distributed-energy-resources-project-costs
+National Grid MA System Data Portal,National Grid,https://systemdataportal.nationalgrid.com/MA/
+ORNL OpenEnergyHub Eversource DG Hosting Capacity,ORNL,https://openenergyhub.ornl.gov/explore/dataset/dghosting_adminvw_dg_hosting_ced_ema_st/
+U.S. DOE Atlas of Hosting Capacity Maps,DOE,https://www.energy.gov/cmei/us-atlas-electric-distribution-system-hosting-capacity-maps
+MassGIS 2020 EJ Population Data,MassGIS,https://www.mass.gov/info-details/massgis-data-2020-environmental-justice-populations
+MA Cumulative Impact Analysis,Mass.gov,https://www.mass.gov/info-details/cumulative-impact-analysis
+MA Household Economic Burden Index,Mass.gov,https://www.mass.gov/files/documents/2023/04/25/MECO%20Utility%20Index_Dec%202022_final.pdf
+NREL 2025 Battery Cost Projections,NREL,https://docs.nrel.gov/docs/fy25osti/93281.pdf
+NREL 2024 Annual Technology Baseline,NREL,https://atb.nrel.gov/electricity/2024/utility-scale_battery_storage
+DOER Draft BESS Model Bylaw Oct 2025,MassDOER,https://www.mass.gov/doc/doer-draft-battery-energy-storage-systems-bess-model-bylaw/download
+Mass.gov ESI Goals & Storage Target,Mass.gov,https://www.mass.gov/info-details/esi-goals-storage-target
+Mass.gov Everett Battery Project,Mass.gov,https://www.mass.gov/info-details/everett-battery-project
+Pierce Atwood — Chapter 239 Analysis,Pierce Atwood LLP,https://www.pierceatwood.com/alerts/breaking-massachusetts-passes-clean-energy-bill-streamlining-permitting-process-battery
+Foley Hoag — AGO Moratorium Rejections,Foley Hoag LLP,https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/march/massachusetts-ago-rejects-yet-another-municipal-solar-and-battery-storage-moratorium/
+Chelsea Record — Energizar ZBA Approval,Chelsea Record,http://chelsearecord.com/2024/10/17/zba-okays-approvals-for-battery-storage-facility/
+pv magazine USA — 83E Round 1 Awards,pv magazine USA,https://pv-magazine-usa.com/2025/12/23/massachusetts-awards-1-3-gw-in-landmark-energy-storage-tender/
+"Energy-Storage.News — MA 5,000 MW",Energy-Storage.News,https://www.energy-storage.news/massachusetts-moves-toward-goal-of-5000mw-of-bess-by-2030/
+felpower.com — System Peak 2025,felpower,https://felpower.com/annual-system-peak-summary-2025-september-newsletter/
+National Zoning Atlas MA,National Zoning Atlas,https://www.zoningatlas.org/massachusetts
+Bowditch — Dover Amendment Case Law,Bowditch LLP,https://www.bowditch.com/bowditchrealestateblog/2024/04/22/prohibiting-non-accessory-bess-violates-massachusetts-law/
