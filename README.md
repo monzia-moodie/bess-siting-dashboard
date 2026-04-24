@@ -24,7 +24,7 @@ Built to support Massachusetts’ statutory 5,000 MW storage mandate by 2030
  
 ## 📊 Live Dashboard
  
-[**→ View the Interactive Dashboard**]([YOUR GITHUB PAGES URL HERE — see Section 9])
+[**→ View the Interactive Dashboard**](https://monzia-moodie.github.io/bess-siting-dashboard/)
  
 ## The Five Evaluation Layers
  
@@ -61,7 +61,7 @@ Built to support Massachusetts’ statutory 5,000 MW storage mandate by 2030
  
 ```bash
 # Requires Node.js 18+
-git clone https://github.com/[YOUR-USERNAME]/bess-siting-dashboard.git
+git clone git clone https://github.com/monzia-moodie/bess-siting-dashboard.git
 cd bess-siting-dashboard
 npm install
 npm run dev
@@ -94,8 +94,8 @@ npm run dev
  
 | Tool | Role |
 |------|------|
-| React 18 | UI framework |
-| Vite 5 | Build tool and dev server |
+| React 19 | UI framework |
+|| Vite 8 | Build tool and dev server |
 | JavaScript (JSX) | Language |
 | Inline CSS only | Styling — zero external UI dependencies |
  
